@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <main>
+    <div class="registers">
+      <div class="e-register">
+        <p>Acc</p>
+        <div class="e-register-content" id="acc">
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+        </div>
+      </div>
+
+      <div class="e-register">
+        <p>Aux</p>
+
+        <div class="e-register-content" id = "aux">
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+        </div>
+      </div>
+
+      <div class="e-register">
+        <p>R_I</p>
+
+        <div class="e-register-content" id = "ri">
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+          <p>0</p>
+        </div>
+      </div>
+
+      <div class="e-operations">
+        <div class="e-buttons">
+          <button onclick="xor()">XOR</button>
+          <button onclick="sum()">SUM</button>
+          <button onclick="not()">NOT</button>
+          <button onclick="not()">AND</button>
+        </div>
+
+        <div class="e-manage-register">
+          <div class="e-input">
+            <select id = "e-manager-element-where-move">
+              <option value="acc">acc</option>
+              <option value="aux">aux</option>
+              <option value="ri">ri</option>
+            </select>
+
+            -
+
+            <select id = "e-manager-element-for-move">
+              <option value="acc">acc</option>
+              <option value="aux">aux</option>
+              <option value="ri">ri</option>
+            </select>
+          </div>
+
+          <button onclick="transferFromButton()"> Mover </button>
+          </div>
+      </div>
+
+
+    </div>
+
+
+
+  </main>
+
+
+  <script src="js/app.js" defer></script>
+</body>
+
+</html>

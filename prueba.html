@@ -1,0 +1,98 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Layout</title>
+  <style>
+    /* CSS */
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+    }
+    .register {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .register-label {
+      margin-bottom: 5px;
+    }
+    .bits {
+      display: flex;
+    }
+    .bit {
+      border: 1px solid #ccc;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button.not {
+      background-color: #e74c3c;
+    }
+    .hhhh {
+      background-color: #f1f1f1;
+      padding: 10px;
+      align-self: center;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="column">
+    <div class="register">
+      <div class="register-label">Acc</div>
+      <div class="bits" id="accBits"></div>
+    </div>
+    <div class="register">
+      <div class="register-label">Aux</div>
+      <div class="bits" id="auxBits"></div>
+    </div>
+  </div>
+  <div class="buttons">
+    <button>XOR</button>
+    <button>SUM</button>
+    <button class="not">NOT</button>
+    <button>AUX ← ACC</button>
+    <button>ACC ← AUX</button>
+  </div>
+  <div class="hhhh">hhhh</div>
+</div>
+
+<script>
+  // JavaScript
+  function createBits(containerId, values) {
+    const container = document.getElementById(containerId);
+    values.forEach(value => {
+      const bit = document.createElement('div');
+      bit.className = 'bit';
+      bit.textContent = value;
+      container.appendChild(bit);
+    });
+  }
+
+  // Initialize bits
+  createBits('accBits', [0, 0, 0, 0, 0, 1, 0, 1]);
+  createBits('auxBits', [0, 0, 0, 0, 0, 1, 1, 1]);
+</script>
+</body>
+</html>
